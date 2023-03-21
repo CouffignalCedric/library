@@ -1,0 +1,41 @@
+# Query: int
+# ContextLines: 1
+
+9 résultats - Fichiers 6
+
+.gitignore:
+  15  
+  16: ### IntelliJ IDEA ###
+  17  .idea
+
+mvnw.cmd:
+   56  
+   57: @REM To isolate internal variables from possible post scripts, we use another setlocal
+   58  @setlocal
+
+  148  		"}"^
+  149: 		"[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $webclient.DownloadFile('%DOWNLOAD_URL%', '%WRAPPER_JAR%')"^
+  150  		"}"
+
+src/main/java/com/wild/library/models/Book.java:
+  22      @GeneratedValue(strategy = GenerationType.IDENTITY)
+  23:     private Long id;
+  24      private String title;
+
+src/main/java/com/wild/library/repository/BookRepository.java:
+  6  
+  7: public interface BookRepository extends JpaRepository<Book, Long>{
+  8      
+
+src/main/java/com/wild/library/service/BookService.java:
+   6  
+   7: public interface BookService {
+   8      Book create(Book book);
+   9      List<Book> read();
+  10:     Book update(int id, Book book);
+  11:     void delete(int id);
+  12      Book update(Long id, Book book);
+
+~/.vscode-server/data/User/globalStorage/cweijan.vscode-mysql-client2/1678896792398@@127.0.0.1@3306@libraryRest/alter-template.sql:
+  2  ALTER TABLE books 
+  3: 	CHANGE id id INT NOT NULL
